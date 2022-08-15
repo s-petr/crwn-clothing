@@ -9,8 +9,6 @@ export const CategoriesContext = createContext({
   setCategoriesMap: () => null,
 });
 
-
-
 export const CategoriesProvider = ({ children }) => {
   const [categoriesMap, setCategoriesMap] = useState({});
 
@@ -23,6 +21,7 @@ export const CategoriesProvider = ({ children }) => {
     getCategoriesMap();
   }, []);
 
+  // This code needs to run only once to seed the Firestore database
   // useEffect(() => {
   //   console.log(SHOP_DATA);
   //   addCollectionAndDocuments("categories", SHOP_DATA);
