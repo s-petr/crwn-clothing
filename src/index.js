@@ -6,7 +6,6 @@ import { store } from "./store/store";
 
 import "./index.scss";
 import App from "./App";
-import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
 
 const root = createRoot(document.getElementById("root"));
@@ -14,11 +13,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <CategoriesProvider>
           <CartProvider>
             <App />
           </CartProvider>
-        </CategoriesProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
